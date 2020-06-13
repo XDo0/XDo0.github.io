@@ -26,12 +26,13 @@ titles:
 key: page-about
 ---
 
-# about me
+## about me
 
 ![HupuBBS_200310190250-1242822577](https://xdo0.github.io/imgsrc/HupuBBS_200310190250-1242822577.png)
 
 * single boy
 * NKU to IIE.UCAS
-* Email：donnie2020 AT 163.com
-* interest: ……
+* Email： donnie2020 AT 163.com
+* research interest: ……
+* hobby： basketball, pes mobile, movies
 
