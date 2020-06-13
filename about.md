@@ -26,9 +26,7 @@ titles:
 key: page-about
 ---
 
-## about me
-
-![HupuBBS_200310190250-1242822577](https://xdo0.github.io/imgsrc/HupuBBS_200310190250-1242822577.png)
+<font face="黑体"><font size="6"> about me</font></font>
 
 * single boy
 * NKU to IIE.UCAS
