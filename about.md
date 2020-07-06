@@ -33,4 +33,5 @@ key: page-about
 * Email： donnie2020 AT 163.com
 * research interest: ……
 * hobby： basketball, pes mobile, movies
+* **Now I decided to upload only English blogs here**
 
