@@ -28,7 +28,6 @@ key: page-about
 
 <font face="黑体"><font size="6"> about me</font></font>
 
-* single boy
 * NKU to IIE.UCAS
 * Email： donnie2020 AT 163.com
 * [CSDN](https://blog.csdn.net/Iv3R_c)
