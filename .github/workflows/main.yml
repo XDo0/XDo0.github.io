@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: mingjun97/regex-property-action@v1
+      - uses: mingjun97/file-regex-replace@v1
         with:
           regex: '\.\./imgsrc/'
           replacement: 'https://xdo0.github.io/imgsrc/'
-          path: '../_posts/'
+          path: '_posts/'
           
