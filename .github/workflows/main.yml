@@ -1,0 +1,19 @@
+- name: File Regex Replace
+  # You may pin to the exact commit or the version.
+  # uses: mingjun97/file-regex-replace@7d8ae0144cd6660fe8ca5a938ae71ea816a06f47
+  uses: mingjun97/file-regex-replace@v1
+  with:
+    # regex to apply(regex)
+    regex: '../imgsrc/'
+    # flags of the regex
+    flags: # optional, default is g
+    # replacement string
+    replacement: 'https://xdo0.github.io/imgsrc/'    # default is $1
+    # Files to be replaced(regex)
+    include: # optional, default is .*
+    # Files not to be replaced(regex)
+    exclude: # optional, default is .^
+    # String file encoding
+    encoding: # optional, default is utf8
+    # Path to the folder to be replaced
+    path: # optional, default is .
