@@ -1,18 +1,14 @@
-name: Build
+name: Replace img src
 
 on:
   - push
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+  replacement:
+    runs-on: ubuntu-latest
 
     steps:
+      - name: imgsrurl
       - uses: mingjun97/regex-property-action@test
         with:
           regex: '../imgsrc/'
           replacement: 'https://xdo0.github.io/imgsrc/'
-      
