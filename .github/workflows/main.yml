@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: XDo0/XDo0.github.io
+      - uses: XDo0/XDo0.github.io@master
         with:
           regex: '\.\./imgsrc/'
           replacement: "https://xdo0.github.io/imgsrc/"
