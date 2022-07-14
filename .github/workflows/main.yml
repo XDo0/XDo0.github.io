@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: imgsrurl
       - uses: mingjun97/regex-property-action@test
         with:
           regex: '../imgsrc/'
