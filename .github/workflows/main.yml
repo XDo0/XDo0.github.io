@@ -11,5 +11,5 @@ jobs:
         with:
           regex: '\.\./imgsrc/'
           replacement: 'https://xdo0.github.io/imgsrc/'
-          path: './_posts/'
+          path: '_posts/'
           
