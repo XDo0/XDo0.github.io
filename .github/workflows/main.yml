@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: mingjun97/regex-property-action@test
+      - uses: mingjun97/regex-property-action@v1
         with:
           regex: '../imgsrc/'
           replacement: 'https://xdo0.github.io/imgsrc/'
