@@ -163,7 +163,7 @@ analytics:
 ## => Build
 ##############################
 markdown: kramdown
-highlighter: rouge
+highlighter: none #rouge
 permalink: date
 
 exclude:
