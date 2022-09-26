@@ -1,0 +1,118 @@
+---
+title: ssh跳板机及 vscode，xshell 隧道的全方位配置
+tag: [ssh, 内网穿透]
+key: 2021-04-01-ssh跳板
+---
+
+# 公钥与私钥使用场景： 　
+
+1. 私钥用来进行解密和签名，是给自己用的。
+2. 公钥由本人公开，用于加密和验证签名，是给别人用的。
+3. 当该用户发送消息时，用私钥签名消息，别人用他给的公钥验证签名，可以保证该信息是由他发送的。当该用户接受消息时，别人用他的公钥加密，他用私钥解密，可以保证该信息只能由他接收到。
+
+签名场景参考[这里](https%3A%2F%2Fwww.zhihu.com%2Fquestion%2F25912483%2Fanswer%2F31653639)
+
+![](https://xdo0.github.io/imgsrc/boxcnT1T51VmpxXhwXtTs5RvOfd.png)
+
+# ssh
+
+## ssh 公私钥连接原理
+
+refer:[An Illustrated Guide to SSH Agent Forwarding (unixwiz.net)](http://www.unixwiz.net/techtips/ssh-agent-forwarding.html#chal)Public Key Access 部分
+
+## 相关文件
+
+- client 端存放私钥 `id_rsa` 文件（文件名不能变），也就是说一个 client 只有一个私钥就可以
+- windows 一般存放在 `C:/Users/你的用户名/.ssh`
+- linux 存放在 `/home/你的用户名/.ssh`，root 用户在 `/root/.ssh`
+- server 端存放 `authorized_keys`，里面**写入**了所有 client 端的公钥，即生成的 `id_rsa.pub`
+
+## 步骤
+
+1. 使用 `ssh-keygen -t rsa` 生成密钥
+
+- 其中 `-t` 是指定加密算法
+- 中间会询问保存密钥地址，为避免冲突，可以改个名字，但是后续需要把私钥改成 `id_rsa` 才能用
+- 然后询问 `passphrase` 这个不填也可以
+
+> `passphrase` 是为了保护私钥的安全. 如果设置了 passphrase, 当载入私钥时需要输入, 否则不需要输入
+
+2. 把公钥放到 server **两种**方法：
+
+- `ssh-copy-id -i pub_key_file username@remotemachine`
+- **或者**新建 `/home/用户名/.ssh/authorized_keys`，然后把 `id_rsa.pub` 复制到目录下，输入命令 `cat id_rsa.pub>>authorized_keys`
+
+# Vscode 免密钥登录
+
+将上面步骤完成后，再配置 ssh configuration file
+
+```JSON
+Host JumpMachine             
+
+    HostName XXX.XXX.XXX.XXX 
+
+    Port XXX                 
+
+    User root                
+
+    IdenytityFIle C:\Users\你的用户名\.ssh\id_rsa
+
+ 
+
+Host TargetMachine           
+
+    HostName XXX.XXX.XXX.XXX 
+
+    Port XXX                 
+
+    User root                
+
+    IdenytityFIle C:\Users\你的用户名\.ssh\id_rsa #用的还是自己电脑的私钥，不是跳板机的
+
+    ProxyCommand ssh -W %h:%p JumpMachine
+
+```
+
+- 一旦 vscode server 被 kill 后无法登录
+
+> Resolver error: Error: The VS Code Server failed to start
+
+> 解决方案：
+
+> 打开 VS Code 菜单"View"->“Command Palatte”->“Kill VS Code Server on Host”
+
+> 选择出问题的远程服务器杀掉那个上面的 VS Code server。然后重新尝试登陆
+
+# Xshell 隧道
+
+## 场景：
+
+跳板机和目标应用服务器在同一局域网下
+
+![](https://xdo0.github.io/imgsrc/boxcn45vhihkZP9KUM2v4DpbAbg.png)
+
+只有使用隧道才能显示目标机的 xftp 文件夹，否则就还是跳板机的文件夹
+
+原理就是指定跳板机的一个用户端口隧道连接目标机的 ssh 服务端口
+
+以下参考这篇博客：
+
+[运维管理之隧道映射访问内网服务器，通过 xshell，xftp 可视化管理服务器文件_U.R.M.L-CSDN 博客](https://blog.csdn.net/urmljyc/article/details/106836563)
+
+## 简要步骤：
+
+1. 新建添加跳板机会话
+
+![](https://xdo0.github.io/imgsrc/boxcnyiQXCdiI2z3PW9uQi0UkL3.png)
+
+2. 在跳板机属性里添加隧道转移规则
+
+侦听端口选个没人用的就可以（1024-65535 为用户端口）
+
+![](https://xdo0.github.io/imgsrc/boxcnYt4TqQo21TuaIbb1ONMacd.png)
+
+3. 新建添加目标机会话
+
+![](https://xdo0.github.io/imgsrc/boxcnyZ70y5m8IiIkg1nBIBqarg.png)
+
+其中用户身份验证使用 password 还是 public key 都 ok
