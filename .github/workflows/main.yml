@@ -10,6 +10,8 @@ jobs:
       env:
         REGEX: \.\.\/imgsrc
         REPLACEMENT: https:\/\/xdo0.github.io\/imgsrc
-        DIR: _posts
-      run: |
+        DIR: ../../_posts
+      run: 
+
+      |
         sed -i  "s/$REGEX/$REPLACEMENT/g"  `grep "../imgsrc/" -rl $DIR`
