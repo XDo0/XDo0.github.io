@@ -1,14 +1,15 @@
-# name: Replace img src
+name: Replace post imgsrc
+on: push
 
-# on:
-#   - push
-# jobs:
-#   replacement:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - uses: XDo0/XDo0.github.io@v3.0
-#         with:
-#           regex: '\.\./imgsrc/'
-#           replacement: "https://xdo0.github.io/imgsrc/"
-#           path: "./_posts"
+jobs:
+  my-job:
+    name: replace
+    runs-on: ubuntu-latest
+    steps:
+    - name: 
+      env:
+        REGEX: \.\.\/imgsrc
+        REPLACEMENT: https:\/\/xdo0.github.io\/imgsrc
+        DIR: ./_posts
+      run: |
+        sed -i  "s/$REGEX/$REPLACEMENT/g"  `grep "../imgsrc/" -rl $DIR`
