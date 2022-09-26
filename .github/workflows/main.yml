@@ -14,5 +14,5 @@ jobs:
       run: 
         # working-directory: _posts
         ls 
-        |
-        sed -i  "s/$REGEX/$REPLACEMENT/g"  `grep "../imgsrc/" -rl $DIR`
+        # |
+        # sed -i  "s/$REGEX/$REPLACEMENT/g"  `grep "../imgsrc/" -rl $DIR`
