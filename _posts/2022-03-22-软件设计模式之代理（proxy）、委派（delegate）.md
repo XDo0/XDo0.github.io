@@ -4,22 +4,22 @@ tag: [软件设计, Java]
 key: 2022-03-22-软件设计模式之代理（proxy）、委派（delegate）
 ---
 
-
-
-# 软件设计模式之代理（proxy）、委派（delegate）
-
 Refer:
 
-- [委托模式 | wikipedia](https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E5%25A7%2594%25E6%2589%2598%25E6%25A8%25A1%25E5%25BC%258F)
-- [代理模式 | 菜鸟教程](https%3A%2F%2Fwww.runoob.com%2Fdesign-pattern%2Fproxy-pattern.html)
-- [JAVA 动态代理](https%3A%2F%2Fwww.jianshu.com%2Fp%2F9bcac608c714)
-- [动态代理 | 廖雪峰](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1264804593397984)
+[委托模式 wikipedia](https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E5%25A7%2594%25E6%2589%2598%25E6%25A8%25A1%25E5%25BC%258F)
+
+[代理模式  菜鸟教程](https%3A%2F%2Fwww.runoob.com%2Fdesign-pattern%2Fproxy-pattern.html)
+
+[JAVA 动态代理](https%3A%2F%2Fwww.jianshu.com%2Fp%2F9bcac608c714)
+
+[动态代理  廖雪峰](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1264804593397984)
+
 - [Java 设计模式——Delegate 委派模式](https%3A%2F%2Fwww.jianshu.com%2Fp%2F192e4e6ba648)
-- [mixin | wikipedia](https%3A%2F%2Fzh.m.wikipedia.org%2Fzh-hans%2FMixin)
+- [mixin  wikipedia](https%3A%2F%2Fzh.m.wikipedia.org%2Fzh-hans%2FMixin)
 
 # 代理 proxy
 
-[代理模式 | 菜鸟教程](https%3A%2F%2Fwww.runoob.com%2Fdesign-pattern%2Fproxy-pattern.html)代码例子
+[代理模式  菜鸟教程](https%3A%2F%2Fwww.runoob.com%2Fdesign-pattern%2Fproxy-pattern.html)代码例子
 
 ## 使用场景
 
@@ -31,7 +31,7 @@ Refer:
 
 ## Java 动态代理
 
-[动态代理 | 廖雪峰](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1264804593397984)代码例子
+[动态代理  廖雪峰](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1264804593397984)代码例子
 
 Java 标准库提供了一种动态代理（Dynamic Proxy）的机制：可以在运行期动态创建某个 `interface` 的实例，无需实现类。
 
@@ -39,7 +39,7 @@ Java 标准库提供了一种动态代理（Dynamic Proxy）的机制：可以�
 
 # 委派 delegate
 
-```
+```java
  class RealPrinter { // the "delegate"
      void print() { 
        System.out.print("something"); 
@@ -81,8 +81,13 @@ mixin，是面向对象程序设计语言中的类，提供了方法的实现。
 
 类型安全近似于所谓的存储器安全（就是限制从存储器的某处，将任意的字节合复制到另一处的能力）。例如，如果初始化一个指向整数区域数据结构的指针，但新对象的指针区域却分配在整数的地方，然后指针区域可借由改变整数区域的值简单改变成任何东西（经由间接引用悬置指针）。
 
-```
-/***在这个例子里，类C可以委托类A或类B，类C拥有方法使自己可以在类A或类B间选择。因为类A或类B必须实现接口I规定的方法，所以在这里委托是类型安全的。**/
+{::options parse_block_html="true" /}
+<details><summary markdown="span">在这个例子里，类C可以委托类A或类B，类C拥有方法使自己可以在类A或类B间选择。因为类A或类B必须实现接口I规定的方法，所以在这里委托是类型安全的。</summary>
+
+</details>
+{::options parse_block_html="false" /}
+
+```Java
 package Paint;
 
 interface I {
