@@ -84,9 +84,6 @@ mixin，是面向对象程序设计语言中的类，提供了方法的实现。
 {::options parse_block_html="true" /}
 <details><summary markdown="span">在这个例子里，类C可以委托类A或类B，类C拥有方法使自己可以在类A或类B间选择。因为类A或类B必须实现接口I规定的方法，所以在这里委托是类型安全的。</summary>
 
-</details>
-{::options parse_block_html="false" /}
-
 ```Java
 package Paint;
 
@@ -141,6 +138,11 @@ public class Main {
 }
 
 ```
+
+</details>
+{::options parse_block_html="false" /}
+
+
 
 **个人理解：**
 
