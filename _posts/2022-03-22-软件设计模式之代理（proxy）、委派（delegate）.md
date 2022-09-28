@@ -83,7 +83,7 @@ Java 标准库提供了一种动态代理（Dynamic Proxy）的机制：可以�
 
 
 
-{::options parse_block_html="true" /}
+
 <details><summary>在这个例子里，类C可以委托类A或类B，类C拥有方法使自己可以在类A或类B间选择。因为类A或类B必须实现接口I规定的方法，所以在这里委托是类型安全的。</summary>
 <pre><code>
 package Paint;
@@ -139,7 +139,7 @@ public class Main {
 }
 </code></pre>
 </details>
-{::options parse_block_html="false" /}
+
 
 
 **个人理解：**
