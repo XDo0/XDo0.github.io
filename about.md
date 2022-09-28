@@ -25,7 +25,7 @@ titles:
   # @end locale config
 key: page-about
 ---
-`<font face="黑体"><font size="6">` about me`</font></font>`
+<font face="黑体" size="6"> about me</font>
 
 * NKU to IIE.UCAS
 * Email： donnie2020 AT 163.com
