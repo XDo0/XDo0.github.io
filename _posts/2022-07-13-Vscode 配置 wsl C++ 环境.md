@@ -8,7 +8,7 @@ key: 2022-07-13-Vscode 配置 wsl C++ 环境
 
 # Wsl C++ 环境
 
-```shell
+```bash
 apt get install build-essential
 apt get install gdb
 ```

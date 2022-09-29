@@ -87,7 +87,6 @@ import os
 可以参考[这里](https://sspai.com/post/73386)，其中飞书应用申请要看最新的[README](https://github.com/Wsine/feishu2md)
 
 ## 其他问题
-- 这个博客使用的高亮不支持bash，可以用shell替代
 - 代码块高亮要用小写如`json`，`Json`和`JSON`都会导致高亮效果不全
 
 

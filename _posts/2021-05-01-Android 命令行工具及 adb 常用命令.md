@@ -27,7 +27,7 @@ Refer:
 1. 手机上下载终端模拟器 [Terminal Emulator for Android](https%3A%2F%2Fapkpure.com%2Ftw%2Fterminal-emulator-for-android%2Fjackpal.androidterm)
 2. 在其中运行命令：
 
-```Bash
+```bash
 su
 
 setprop service.adb.tcp.port 5555
