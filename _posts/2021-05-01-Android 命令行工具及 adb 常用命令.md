@@ -98,14 +98,14 @@ C/S 架构，分为以下三个组件
 - `text` 焦点处于某文本框时输入文本
 - `keyevent <keycode>` 模拟按键输入
 
-![](https://xdo0.github.io/_posts/imgsrc/boxcnPqWcMLF4QudC7wBtWcOGjg.png)
+![](https://xdo0.github.io/imgsrc/boxcnPqWcMLF4QudC7wBtWcOGjg.png)
 
 - 查看设备信息 `getprop `
 - `ro.product.cpu.abi` 查看 CPU 架构
 - `ro.build.version.release` Android 系统版本
 - `ro.product.model` 型号
 
-![](https://xdo0.github.io/_posts/imgsrc/boxcnPuYAqnZncUskIaMopN1YQf.png)
+![](https://xdo0.github.io/imgsrc/boxcnPuYAqnZncUskIaMopN1YQf.png)
 
 - 获得 android_id：`settings get secure android_id`
 - 查看屏幕分辨率/密度：`wm size/density`

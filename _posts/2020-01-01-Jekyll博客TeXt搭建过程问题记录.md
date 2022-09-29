@@ -60,9 +60,11 @@ key :2020-06-14example
 这个博客有个比较大的问题是：图片在构建博客后无法按照相对路径寻址，只能上传图床
 ### 解决
 使用vscode的全局文本替换功能
-将`./imgsrc`替换为`https://xdo0.github.io/_posts/imgsrc`
+将`.. /imgsrc`替换为`https://xdo0.github.io/imgsrc`
+
 ### p.s.
-之前尝试用GitHub action替换，试了几个github action market的，效果不好；也尝试[自己写](https://juejin.cn/post/6875857705282568200#heading-7)，发现太麻烦了
+- 之前尝试用GitHub action替换，试了几个github action market的，效果不好；也尝试[自己写](https://juejin.cn/post/6875857705282568200#heading-7)，发现太麻烦了
+- 而且图片在`_posts/imgsrc`下时，无法通过url获得，只能放在`.. /imgsrc`下
 
 ## 折叠块代码高亮
 这个尝试使用[highlight.js](https://highlightjs.org/)来实现：
