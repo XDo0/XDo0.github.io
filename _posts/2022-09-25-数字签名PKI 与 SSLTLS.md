@@ -25,11 +25,11 @@ key: 2022-09-25-数字签名，PKI 与 SSL/TLS
 
 数字签名的公私钥是和非对称加密反过来的，具体如下图所示。私钥是签名者用来加密数据的散列值的，而公钥是分发给外界，用来解密散列值，进而验证签名的数据是由签名者发送过来的，且没有被篡改。
 
-![](https://xdo0.github.io/imgsrc/boxcnuijxGoQF7rWsL1Othhe9Oh.png)
+![](https://xdo0.github.io/_posts/imgsrc/boxcnuijxGoQF7rWsL1Othhe9Oh.png)
 
 所以就有了下图，即消息发送方 Alice 和消息接收方 Bob 的处理过程，先签名后加密发送。
 
-![](https://xdo0.github.io/imgsrc/boxcnl6CM00PyWQBvDTRWBSgrue.png)
+![](https://xdo0.github.io/_posts/imgsrc/boxcnl6CM00PyWQBvDTRWBSgrue.png)
 
 图 2 发送消息的处理过程
 
@@ -37,7 +37,7 @@ key: 2022-09-25-数字签名，PKI 与 SSL/TLS
 
 1. 可以看下面的图片，中间人拦截消息并替换签名导致 Bob 以为消息是 Mallory 发送的（前提是 Bob 保存了 Mallory 的验签公钥）。
 
-![](https://xdo0.github.io/imgsrc/boxcn8apkDG09LUFvPevk37mhre.png)
+![](https://xdo0.github.io/_posts/imgsrc/boxcn8apkDG09LUFvPevk37mhre.png)
 
 1. 即使 Bob 只会用 Alice 的公钥验签，但中间人一旦在不可信的信道拦截到消息，也可以通过 Alice 的验签公钥验证出消息是 Alice 发送的。
 
@@ -69,7 +69,7 @@ PKI 体系架构由证书申请者、注册机构 RA、认证中心 CA、证书�
 - 3、校验证书 `是否过期`；
 - 4、校验证书 `域名` 是否 `一致`。
 
-![](https://xdo0.github.io/imgsrc/boxcnJ7OXVpH5ILsrUBDaOxonTz.png)
+![](https://xdo0.github.io/_posts/imgsrc/boxcnJ7OXVpH5ILsrUBDaOxonTz.png)
 
 ### **CA 机构 颁发证书的基本原理：**
 
@@ -89,7 +89,7 @@ PKI 体系架构由证书申请者、注册机构 RA、认证中心 CA、证书�
 
 实际证书申请中，由于权威的 `CA机构` 数量不多，若所有的 `服务器证书` 都向权威 CA 机构申请，那么 CA 机构的工作量就会非常大。因此 CA 机构采取 `授权` `二级机构` 的方式来管理证书申请，经 `授权` 的 `二级机构` 也可以签发 `服务器证书`。
 
-![](https://xdo0.github.io/imgsrc/boxcndGWoHP9LwIU6FqVxKXREkh.png)
+![](https://xdo0.github.io/_posts/imgsrc/boxcndGWoHP9LwIU6FqVxKXREkh.png)
 
 接下来讲下现实的场景，上面 Bob 和 Alice 的场景只是其中的一环。以 https 的 ssl/tls 为例：
 
@@ -119,7 +119,7 @@ PKI 体系架构由证书申请者、注册机构 RA、认证中心 CA、证书�
 
 # 4. Fiddler 抓包原理
 
-![](https://xdo0.github.io/imgsrc/boxcndhZKd7dpwUlLCyFVtiYHOh.png)
+![](https://xdo0.github.io/_posts/imgsrc/boxcndhZKd7dpwUlLCyFVtiYHOh.png)
 
 ### 4.1 SSL Pinning
 
