@@ -4,16 +4,16 @@ tag: [SSL, 加密, 签名, 抓包]
 key: 2022-09-25-数字签名，PKI 与 SSL/TLS
 ---
 
-[“先签名后加密”的思考-云社区-华为云](https%3A%2F%2Fbbs.huaweicloud.com%2Fblogs%2F205524)
+[“先签名后加密”的思考-云社区-华为云](https://bbs.huaweicloud.com/blogs/205524)
 
-[公开密钥基础建设-WIKI](https%3A%2F%2Fzh.wikipedia.org%2Fzh-sg%2F%25E5%2585%25AC%25E9%2596%258B%25E9%2587%2591%25E9%2591%25B0%25E5%259F%25BA%25E7%25A4%258E%25E5%25BB%25BA%25E8%25A8%25AD)
+[公开密钥基础建设-WIKI](https://zh.wikipedia.org/zh-sg/%25E5%2585%25AC%25E9%2596%258B%25E9%2587%2591%25E9%2591%25B0%25E5%259F%25BA%25E7%25A4%258E%25E5%25BB%25BA%25E8%25A8%25AD)
 
-[网络安全系统之四 PKI 体系 - PBDragon - 博客园](https%3A%2F%2Fwww.cnblogs.com%2FPBDragon%2Fp%2F12694274.html)
-[数字签名、数字证书与 HTTPS 是什么关系? - 知乎](https%3A%2F%2Fwww.zhihu.com%2Fquestion%2F52493697%2Fanswer%2F130813213)
+[网络安全系统之四 PKI 体系 - PBDragon - 博客园](https://www.cnblogs.com/PBDragon/p/12694274.html)
+[数字签名、数字证书与 HTTPS 是什么关系? - 知乎](https://www.zhihu.com/question/52493697/answer/130813213)
 
-[密钥交换算法](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1304227905273889)
+[密钥交换算法](https://www.liaoxuefeng.com/wiki/1252599548343744/1304227905273889)
 
-[一文详解 HTTPS 与 TLS 证书链校验 - xiaxueliang - 博客园](https%3A%2F%2Fwww.cnblogs.com%2Fxiaxveliang%2Fp%2F13183175.html)
+[一文详解 HTTPS 与 TLS 证书链校验 - xiaxueliang - 博客园](https://www.cnblogs.com/xiaxveliang/p/13183175.html)
 
 首先非对称密钥加密，和摘要算法都了解，但是如何用其签名，可能一时分不开。
 
@@ -46,7 +46,7 @@ key: 2022-09-25-数字签名，PKI 与 SSL/TLS
 图二保证了消息的机密（明文不被窃取）、完整（消息不被篡改）。但是无法保证可靠（双方身份合法，使用密钥准确）。
 
 - 这就有了 PKI 体系，来验证身份合法性；
-- 使用 [Diffie-Hellman 密钥](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1304227905273889)交换算法来传递密钥。
+- 使用 [Diffie-Hellman 密钥](https://www.liaoxuefeng.com/wiki/1252599548343744/1304227905273889)交换算法来传递密钥。
 
 > PKI 体系，即公开密钥基础建设（Public Key Infrastructure，PKI），通过使用**公钥技术和数据证书**来提供信息系统安全服务，并负责**验证数字证书持有者身份**的一种体系。PKI 基础设施采用证书管理公钥，通过第三方可信任认证中心，把用户的**公钥和用户的身份信息捆绑**在一起，它是具有通用性的安全基础设施，是一套服务体系。
 
@@ -105,7 +105,7 @@ PKI 体系架构由证书申请者、注册机构 RA、认证中心 CA、证书�
 
 总结：用 `非对称加密` 的手段 `传递密钥`，然后 `用密钥` 进行 `对称加密传递` 数据。
 
-简要步骤，这里参考[大佬的文章](https%3A%2F%2Fwww.zhihu.com%2Fquestion%2F52493697%2Fanswer%2F130813213)，以浏览器输入：https://某宝.com 的过程为例，这里浏览器是 `client`，某宝是 `server`
+简要步骤，这里参考[大佬的文章](https://www.zhihu.com/question/52493697/answer/130813213)，以浏览器输入：https://某宝.com 的过程为例，这里浏览器是 `client`，某宝是 `server`
 
 1. 浏览器与某宝建立 TCP 连接
 2. 某宝向浏览器下发自己的数字证书

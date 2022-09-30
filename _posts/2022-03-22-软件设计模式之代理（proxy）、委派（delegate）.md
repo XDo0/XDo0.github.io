@@ -6,20 +6,20 @@ key: 2022-03-22-软件设计模式之代理（proxy）、委派（delegate）
 
 Refer:
 
-[委托模式 wikipedia](https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E5%25A7%2594%25E6%2589%2598%25E6%25A8%25A1%25E5%25BC%258F)
+[委托模式 wikipedia](https://zh.wikipedia.org/wiki/%25E5%25A7%2594%25E6%2589%2598%25E6%25A8%25A1%25E5%25BC%258F)
 
-[代理模式  菜鸟教程](https%3A%2F%2Fwww.runoob.com%2Fdesign-pattern%2Fproxy-pattern.html)
+[代理模式  菜鸟教程](https://www.runoob.com/design-pattern/proxy-pattern.html)
 
-[JAVA 动态代理](https%3A%2F%2Fwww.jianshu.com%2Fp%2F9bcac608c714)
+[JAVA 动态代理](https://www.jianshu.com/p/9bcac608c714)
 
-[动态代理  廖雪峰](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1264804593397984)
+[动态代理  廖雪峰](https://www.liaoxuefeng.com/wiki/1252599548343744/1264804593397984)
 
-- [Java 设计模式——Delegate 委派模式](https%3A%2F%2Fwww.jianshu.com%2Fp%2F192e4e6ba648)
-- [mixin  wikipedia](https%3A%2F%2Fzh.m.wikipedia.org%2Fzh-hans%2FMixin)
+- [Java 设计模式——Delegate 委派模式](https://www.jianshu.com/p/192e4e6ba648)
+- [mixin  wikipedia](https://zh.m.wikipedia.org/zh-hans/Mixin)
 
 # 代理 proxy
 
-[代理模式  菜鸟教程](https%3A%2F%2Fwww.runoob.com%2Fdesign-pattern%2Fproxy-pattern.html)代码例子
+[代理模式  菜鸟教程](https://www.runoob.com/design-pattern/proxy-pattern.html)代码例子
 
 ## 使用场景
 
@@ -31,7 +31,7 @@ Refer:
 
 ## Java 动态代理
 
-[动态代理  廖雪峰](https%3A%2F%2Fwww.liaoxuefeng.com%2Fwiki%2F1252599548343744%2F1264804593397984)代码例子
+[动态代理  廖雪峰](https://www.liaoxuefeng.com/wiki/1252599548343744/1264804593397984)代码例子
 
 Java 标准库提供了一种动态代理（Dynamic Proxy）的机制：可以在运行期动态创建某个 `interface` 的实例，无需实现类。
 

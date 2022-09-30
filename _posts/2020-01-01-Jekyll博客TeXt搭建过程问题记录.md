@@ -88,6 +88,8 @@ import os
 ## 飞书文档转换为markdown
 可以参考[这里](https://sspai.com/post/73386)，其中飞书应用申请要看最新的[README](https://github.com/Wsine/feishu2md)
 
+其中要配置config：`C:\Users\XXX\AppData\Roaming\feishu2md\config.json`
+
 ## 其他问题
 - 代码块高亮要用小写如`json`，`Json`和`JSON`都会导致高亮效果不全
 

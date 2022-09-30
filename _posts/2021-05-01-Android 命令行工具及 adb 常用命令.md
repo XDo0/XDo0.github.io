@@ -24,7 +24,7 @@ Refer:
 
 ## 方式二（无需 usb 线）
 
-1. 手机上下载终端模拟器 [Terminal Emulator for Android](https%3A%2F%2Fapkpure.com%2Ftw%2Fterminal-emulator-for-android%2Fjackpal.androidterm)
+1. 手机上下载终端模拟器 [Terminal Emulator for Android](https://apkpure.com/tw/terminal-emulator-for-android/jackpal.androidterm)
 2. 在其中运行命令：
 
 ```bash
@@ -113,7 +113,7 @@ C/S 架构，分为以下三个组件
 - 查看连接过的 WiFi 密码：`cat /data/misc/wifi/*.conf`
 - `date -s 20190531.131600`  将系统日期和时间更改为 2019 年 05 月 31 日 13 点 16 分 00 秒。
 - 内核日志：`dmesg`
-- 使用 [Monkey](https%3A%2F%2Fdeveloper.android.com%2Fstudio%2Ftest%2Fmonkey) 进行随机压力测试：`monkey -p <packagename> -v 500` 发送 500 个伪随机事件
+- 使用 [Monkey](https://developer.android.com/studio/test/monkey) 进行随机压力测试：`monkey -p <packagename> -v 500` 发送 500 个伪随机事件
 
 #### 反编译相关
 
@@ -134,14 +134,14 @@ C/S 架构，分为以下三个组件
 - apksigner，为 apk 签名
 - avdmanager，创建和管理 Android 虚拟设备 (AVD)
 - bmgr，Backup Manager，备份管理器
-- bundletool，[Android App Bundle](https%3A%2F%2Fdeveloper.android.google.cn%2Fguide%2Fapp-bundle%3Fhl%3Dzh-cn%23other_considerations) 是一种发布格式，其中包含您应用的所有经过编译的代码和资源，它会将 APK 生成及签名交由 Google Play 来完成。
+- bundletool，[Android App Bundle](https://developer.android.google.cn/guide/app-bundle%3Fhl%3Dzh-cn%23other_considerations) 是一种发布格式，其中包含您应用的所有经过编译的代码和资源，它会将 APK 生成及签名交由 Google Play 来完成。
 - d8，将项目的 Java 字节码编译为在 Android 设备上运行的 DEX 字节码
 - dmtracedump，将项目的 Java 字节码编译为在 Android 设备上运行的 DEX 字节码
-- [dumpsys](https%3A%2F%2Fdeveloper.android.google.cn%2Fstudio%2Fcommand-line%2Fdumpsys%3Fhl%3Dzh-cn)，在 Android 设备上运行的工具，可提供有关系统服务的信息。
+- [dumpsys](https://developer.android.google.cn/studio/command-line/dumpsys%3Fhl%3Dzh-cn)，在 Android 设备上运行的工具，可提供有关系统服务的信息。
 - etc1tool，命令行实用程序，可用于将 PNG 图片编码为 ETC1 压缩标准格式，并将 ETC1 压缩图片解码回 PNG。
 - jobb，构建不透明二进制 Blob (OBB) 格式的已加密和未加密 APK 扩展文件。使用 StorageManager 在应用中下载和装载这些扩展文件。OBB 文件用于为 Android 应用提供额外文件资源（例如图形、音频和视频），这些文件资源与应用的 APK 文件是分开的。
 - jetifier，将依赖于支持库的库迁移为依赖于等效的 AndroidX 软件包
-- [logcat](https%3A%2F%2Fdeveloper.android.google.cn%2Fstudio%2Fcommand-line%2Flogcat%3Fhl%3Dzh-cn)，命令行工具，用于转储系统消息日志，包括设备抛出错误时的堆栈轨迹，以及从应用使用 Log 类写入的消息。
+- [logcat](https://developer.android.google.cn/studio/command-line/logcat%3Fhl%3Dzh-cn)，命令行工具，用于转储系统消息日志，包括设备抛出错误时的堆栈轨迹，以及从应用使用 Log 类写入的消息。
 - mkscard，在多个虚拟设备之间创建共享的 FAT32 磁盘映像，以模拟多个设备中存在相同 SD 卡的情形
 - retrace，用于从经过混淆处理的堆栈轨迹获取原始堆栈轨迹。系统会通过在映射文件中对类名和方法名与其原始定义进行匹配来重构堆栈轨迹。
 - sdkmanager，查看、安装、更新和卸载 Android SDK 的软件包
