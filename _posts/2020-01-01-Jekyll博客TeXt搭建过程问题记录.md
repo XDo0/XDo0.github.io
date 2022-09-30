@@ -67,6 +67,11 @@ key :2020-06-14example
 - 而且图片在`_posts/imgsrc`下时，无法通过url获得，只能放在`.. /imgsrc`下
 
 ## 折叠块代码高亮
+
+## 第一种方法
+
+（不推荐，因为背景色会保持博客整体背景）
+
 这个尝试使用[highlight.js](https://highlightjs.org/)来实现：
 在`_layouts\page.html`中添加：
 ```html
@@ -85,6 +90,36 @@ import os
 </details>
 ```
 都选择tomorrow的style效果最好
+
+## 第二种方法
+
+利用kramdown解析html块的功能
+
+代码参考：
+
+```html
+<details  markdown="1"><summary>Click to show the Code</summary>
+~~~ java
+    public class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.f();      // output: A: doing f()
+        c.g();      // output: A: doing g()
+        c.toB();    // 更换委托对象
+        c.f();      // output: B: doing f()
+        c.g();      // output: B: doing g()
+    }
+}
+~~~ 
+</details>
+```
+或者
+```html
+
+```
+
+
+
 ## 飞书文档转换为markdown
 可以参考[这里](https://sspai.com/post/73386)，其中飞书应用申请要看最新的[README](https://github.com/Wsine/feishu2md)
 

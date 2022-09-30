@@ -84,8 +84,8 @@ Java 标准库提供了一种动态代理（Dynamic Proxy）的机制：可以�
 
 
 
-<details><summary>在这个例子里，类C可以委托类A或类B，类C拥有方法使自己可以在类A或类B间选择。因为类A或类B必须实现接口I规定的方法，所以在这里委托是类型安全的。</summary>
-<pre><code>
+<details markdown="1"><summary>在这个例子里，类C可以委托类A或类B，类C拥有方法使自己可以在类A或类B间选择。因为类A或类B必须实现接口I规定的方法，所以在这里委托是类型安全的。</summary>
+```java
 package Paint;
 
 interface I {
@@ -137,7 +137,7 @@ public class Main {
         c.g();      // output: B: doing g()
     }
 }
-</code></pre>
+```
 </details>
 
 
