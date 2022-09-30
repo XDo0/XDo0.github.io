@@ -68,7 +68,7 @@ key :2020-06-14example
 
 ## 折叠块代码高亮
 
-## 第一种方法
+## 第一种方法（不推荐）
 
 （不推荐，因为背景色会保持博客整体背景）
 
@@ -91,9 +91,11 @@ import os
 ```
 都选择tomorrow的style效果最好
 
-## 第二种方法
+## 第二种方法（推荐）
 
 利用kramdown解析html块的功能
+
+注意不要使用缩进！！！
 
 代码参考：
 
@@ -102,12 +104,7 @@ import os
 ~~~ java
     public class Main {
     public static void main(String[] args) {
-        C c = new C();
-        c.f();      // output: A: doing f()
-        c.g();      // output: A: doing g()
-        c.toB();    // 更换委托对象
-        c.f();      // output: B: doing f()
-        c.g();      // output: B: doing g()
+        C c = new C();       
     }
 }
 ~~~ 
@@ -115,7 +112,17 @@ import os
 ```
 或者
 ```html
-
+{::options parse_block_html="true" /}
+<details><summary markdown="span">Click to show the Code</summary>
+~~~ java
+    public class Main {
+    public static void main(String[] args) {
+        C c = new C();       
+    }
+}
+~~~ 
+</details>
+{::options parse_block_html="false" /}
 ```
 
 
