@@ -10,9 +10,9 @@ Refer:
 
 这个 github repo 很详细：[mzlogin/awesome-adb: ADB Usage Complete / ADB 用法大全 (github.com)](https://github.com/mzlogin/awesome-adb)
 
-[Android 调试桥 (adb)  |  Android 开发者  |  Android Developers (google.cn)](https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn#devicestatus)
+[Android 调试桥 (adb)  Android 开发者  ](https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn#devicestatus)
 
-[ADB 常用命令及其用法大全_醒不了的星期八的博客-CSDN 博客_adb 命令](https://blog.csdn.net/qq_39969226/article/details/87897863)
+[ADB 常用命令及其用法大全-CSDN 博客](https://blog.csdn.net/qq_39969226/article/details/87897863)
 
 # 无线连接
 

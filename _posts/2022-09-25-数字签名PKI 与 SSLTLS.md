@@ -6,9 +6,10 @@ key: 2022-09-25-数字签名，PKI 与 SSL/TLS
 
 [“先签名后加密”的思考-云社区-华为云](https://bbs.huaweicloud.com/blogs/205524)
 
-[公开密钥基础建设-WIKI](https://zh.wikipedia.org/zh-sg/%25E5%2585%25AC%25E9%2596%258B%25E9%2587%2591%25E9%2591%25B0%25E5%259F%25BA%25E7%25A4%258E%25E5%25BB%25BA%25E8%25A8%25AD)
+[公开密钥基础建设-WIKI](https://zh.wikipedia.org/zh-sg/%E5%85%AC%E9%96%8B%E9%87%91%E9%91%B0%E5%9F%BA%E7%A4%8E%E5%BB%BA%E8%A8%AD)
 
 [网络安全系统之四 PKI 体系 - PBDragon - 博客园](https://www.cnblogs.com/PBDragon/p/12694274.html)
+
 [数字签名、数字证书与 HTTPS 是什么关系? - 知乎](https://www.zhihu.com/question/52493697/answer/130813213)
 
 [密钥交换算法](https://www.liaoxuefeng.com/wiki/1252599548343744/1304227905273889)
