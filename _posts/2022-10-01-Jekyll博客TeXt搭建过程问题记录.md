@@ -40,10 +40,12 @@ gitalk:
       css: 'https://unpkg.com/gitalk/dist/gitalk.css'
 ```
 
+注意：需要将这个url： `https://cors-anywhere.azm.workers.dev/`加入科学上网，否则就得[更换proxy](https://github.com/gitalk/gitalk/issues/506)
+
 Ref:
 
-- [Feature request: custom proxy config for Gitalk to solve 403 error · Issue #348 · kitian616/jekyll-TeXt-theme (github.com)](https://github.com/kitian616/jekyll-TeXt-theme/issues/348)
-- [Hexo使用Gitalk评论系统偶现403问题解决 YY的闲时小站 (liuyueyang.top)](https://liuyueyang.top/022111.html#其它的问题)
+- [TeXt博客更换gitalk的proxy步骤](https://github.com/kitian616/jekyll-TeXt-theme/issues/348)
+- [搭建跨域反向代理](https://liuyueyang.top/022111.html#其它的问题)
 
 ## leancloud统计点击量为0
 按文档配置好后发现每个文章的阅读量一直是0，后来把`_config.yml`的`pageview provider:`的`leancloud`加上双引号就成功了。
