@@ -21,7 +21,7 @@ key: 2022-10-01-Jekyll博客TeXt搭建过程问题记录
 
 ## gittalk
 配置好会出现`未找到相关issue进行评论`的问题
-* 首先，确保已经为你的username.github,io打开了issue
+* 首先，确保已经为你的username.github.io打开了issue
 * 然后在你的blog的gittalk上登陆你的github账号
 * 这样以后你在发布好博客预览时就会初始化gittalk  
 
@@ -36,8 +36,8 @@ key: 2022-10-01-Jekyll博客TeXt搭建过程问题记录
 
 ```yaml
 gitalk:
-      js: 'https://unpkg.com/gitalk/dist/gitalk.css'
-      css: 'https://unpkg.com/gitalk/dist/gitalk.min.js'
+      js: 'https://unpkg.com/gitalk/dist/gitalk.min.js'
+      css: 'https://unpkg.com/gitalk/dist/gitalk.css'
 ```
 
 Ref:
@@ -85,12 +85,13 @@ key :2020-06-14example
 
 ## 折叠块代码高亮
 
-## 第一种方法（不推荐）
+### 第一种方法（不推荐）
 
 （不推荐，因为背景色会保持博客整体背景）
 
 这个尝试使用[highlight.js](https://highlightjs.org/)来实现：
 在`_layouts\page.html`中添加：
+
 ```html
 <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/tomorrow.min.css">
@@ -108,7 +109,7 @@ import os
 ```
 都选择tomorrow的style效果最好
 
-## 第二种方法（推荐）
+### 第二种方法（推荐）
 
 利用kramdown解析html块的功能
 
