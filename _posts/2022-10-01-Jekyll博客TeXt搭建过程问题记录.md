@@ -2,6 +2,7 @@
 title: Jekyll博客TeXt搭建过程问题记录
 tag: [frontend, github pages]
 key: 2022-10-01-Jekyll博客TeXt搭建过程问题记录
+modify_date: 2022-10-12
 ---
 
 # 背景
@@ -40,7 +41,9 @@ gitalk:
       css: 'https://unpkg.com/gitalk/dist/gitalk.css'
 ```
 
-注意：需要将这个url： `https://cors-anywhere.azm.workers.dev/`加入科学上网，否则就得[更换proxy](https://github.com/gitalk/gitalk/issues/506)
+### 报错：network error
+
+需要将这个url： `https://cors-anywhere.azm.workers.dev/`加入科学上网，否则就得[更换proxy](https://github.com/gitalk/gitalk/issues/506)
 
 Ref:
 
