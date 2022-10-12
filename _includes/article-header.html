@@ -48,7 +48,8 @@
   <meta itemprop="headline" content="{{ _article_title }}">
 {%- endif -%}
 
-{%- if page.modify_date -%}
+<footer class="article__footer">
+  {%- if page.modify_date -%}
     {%- include snippets/get-locale-string.html key='ARTICLE_DATE_FORMAT' -%}
     {%- assign _locale_date_format = __return -%}
 
@@ -60,3 +61,4 @@
   {%- elsif page.date -%}
     <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
   {%- endif -%}
+</footer>
