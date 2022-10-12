@@ -4,6 +4,8 @@ tag: [SSL, 加密, 签名, 抓包]
 key: 2022-09-25-数字签名，PKI 与 SSL/TLS
 ---
 
+Ref:
+
 [“先签名后加密”的思考-云社区-华为云](https://bbs.huaweicloud.com/blogs/205524)
 
 [公开密钥基础建设-WIKI](https://zh.wikipedia.org/zh-sg/%E5%85%AC%E9%96%8B%E9%87%91%E9%91%B0%E5%9F%BA%E7%A4%8E%E5%BB%BA%E8%A8%AD)
@@ -16,7 +18,9 @@ key: 2022-09-25-数字签名，PKI 与 SSL/TLS
 
 [一文详解 HTTPS 与 TLS 证书链校验 - xiaxueliang - 博客园](https://www.cnblogs.com/xiaxveliang/p/13183175.html)
 
-首先非对称密钥加密，和摘要算法都了解，但是如何用其签名，可能一时分不开。
+---
+
+之前对非对称密钥加密和摘要算法都了解，但是如何用其签名，可能一时分不开。
 
 本文就从数字签名——PKI 体系——SSL/TLS 进行讲解，**注意并没有把过程细节详细讲清楚，只适合大致了解。**
 
