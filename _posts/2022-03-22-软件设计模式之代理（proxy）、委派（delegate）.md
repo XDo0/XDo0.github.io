@@ -4,6 +4,15 @@ tag: [软件设计, Java]
 key: 2022-03-22-软件设计模式之代理（proxy）、委派（delegate）
 ---
 
+<style>
+pre {
+  overflow-y: auto;
+  max-height: 300px;
+}
+</style>
+
+
+
 Refer:
 
 [委托模式 wikipedia](https://zh.wikipedia.org/wiki/%25E5%25A7%2594%25E6%2589%2598%25E6%25A8%25A1%25E5%25BC%258F)
