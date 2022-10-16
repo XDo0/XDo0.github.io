@@ -2,7 +2,7 @@
 title: Jekyll博客TeXt搭建过程问题记录
 tag: [frontend, github pages]
 key: 2022-10-01-Jekyll博客TeXt搭建过程问题记录
-modify_date: 2022-10-12
+modify_date: 2022-10-16
 ---
 
 # 背景
@@ -148,7 +148,20 @@ import os
 {::options parse_block_html="false" /}
 ```
 
+## 代码块滑动条
 
+如果觉得上面折叠隐藏代码块效果不好，可以在md文件加入
+
+```html
+<style>
+pre {
+  overflow-y: auto;
+  max-height: 300px;
+}
+</style>
+```
+
+这样后面的代码块超出长度就会有纵轴的滑动条，其中`max-height`可以自己设置。
 
 ## 飞书文档转换为markdown
 可以参考[这里](https://sspai.com/post/73386)，其中飞书应用申请要看最新的[README](https://github.com/Wsine/feishu2md)

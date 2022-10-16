@@ -4,13 +4,6 @@ tag: [软件设计, Java]
 key: 2022-03-22-软件设计模式之代理（proxy）、委派（delegate）
 ---
 
-<style>
-pre {
-  overflow-y: auto;
-  max-height: 300px;
-}
-</style>
-
 
 
 Refer:
@@ -91,6 +84,12 @@ Java 标准库提供了一种动态代理（Dynamic Proxy）的机制：可以�
 > 类型安全近似于所谓的存储器安全（就是限制从存储器的某处，将任意的字节合复制到另一处的能力）。例如，如果初始化一个指向整数区域数据结构的指针，但新对象的指针区域却分配在整数的地方，然后指针区域可借由改变整数区域的值简单改变成任何东西（经由间接引用悬置指针）。
 
 
+<style>
+pre {
+  overflow-y: auto;
+  max-height: 500px;
+}
+</style>
 
 
 {::options parse_block_html="true" /}
