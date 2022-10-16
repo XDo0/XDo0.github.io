@@ -63,48 +63,48 @@ make -f toolchain.mk toolchains -j2
 
 ​	`make toolchains`命令没有下载aarch32的编译链接工具
 
-## 编译运行时
+## 编译运行
 
 建议使用多线程`sudo make run -j`提高编译速度
 
-- 会发现报错：
+### 报错1
 
-  > uuid/uuid.h: No such file or directory
+> uuid/uuid.h: No such file or directory
 
-​	解决：`aptitude install uuid-dev`
+解决：`aptitude install uuid-dev`
 ​	
-​	如果用的是国内源还需要
+如果用的是国内源还需要
 
-- unset http(s) proxy
+- `unset http(s) proxy`
 
 - 或者`export no_proxy="mirrors.tuna.tsinghua.edu.cn,mirrors.aliyun.com"`
 
 安装时有可能会提示一个依赖包冲突，选择回退这个依赖包版本，并继续安装`uuid-dev`
 
-- 报错：
+### 报错2
 
-  > Your PATH contains spaces, TABs, and/or newline (\n) characters.
-  > This doesn't work. Fix you PATH.
+> Your PATH contains spaces, TABs, and/or newline (\n) characters.
+> This doesn't work. Fix you PATH.
 
-  可是路径中并没有空格，最后参考[这篇](https://blog.csdn.net/weixin_45502929/article/details/119642271)，`sudo make run`（可是我用的就是root用户身份啊）
+可是路径中并没有空格，最后参考[这篇](https://blog.csdn.net/weixin_45502929/article/details/119642271)，`sudo make run`（可是我用的就是root用户身份啊）
 
-- 报错
+### 报错3
 
-  > ERROR: pkg-config binary 'pkg-config' not found
+> ERROR: pkg-config binary 'pkg-config' not found
 
-  安装`apt-get install pkg-config`
+安装`apt-get install pkg-config`
 
-- 报错：
+### 报错4
 
-  > ERROR: glib-2.56 gthread-2.0 is required to compile QEMU
+> ERROR: glib-2.56 gthread-2.0 is required to compile QEMU
 
-  应该是qemu的依赖不全，去[Hosts/Linux - QEMU](https://wiki.qemu.org/Hosts/Linux)查看需要安装哪些包：
+应该是qemu的依赖不全，去[Hosts/Linux - QEMU](https://wiki.qemu.org/Hosts/Linux)查看需要安装哪些包：
 
-  `apt-get install git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build`
+`apt-get install git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build`
 
-  这些包之前环境配置时都安装过，可能是当时没安装全。
-  
-  安装过程中可能需要downgrade一些包。
+这些包之前环境配置时都安装过，可能是当时没安装全。
+
+安装过程中可能需要downgrade一些包。
 
 # 测试是否成功运行
 
