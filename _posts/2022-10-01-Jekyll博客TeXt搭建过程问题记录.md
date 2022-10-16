@@ -61,7 +61,7 @@ Ref:
 3.验证成功后选择站点地图（TeXt已经把sitemap插件安装好了），添加`https://username.github.io/sitemap.xml`即可。
 sitemap文件就是能够让搜索引擎
 * [Baidu](https://ziyuan.baidu.com/dashboard/index)
-和google类似，不过据说
+和google类似，不过据说github禁止百度的爬虫，所以没法用百度搜索到github相关界面。
 
 ## 写个自己的about
 直接更改根目录的about.md
@@ -85,7 +85,7 @@ key :2020-06-14example
 将`.. /imgsrc`替换为`https://xdo0.github.io/imgsrc`
 
 ### p.s.
-- 之前尝试用GitHub action替换，试了几个github action market的，效果不好；也尝试[自己写](https://juejin.cn/post/6875857705282568200#heading-7)，发现太麻烦了
+- 之前尝试用GitHub action替换，试了几个github action market的，效果不好；也尝试[自己写](https://juejin.cn/post/6875857705282568200#heading-7)，需要配置git相关密钥，太麻烦了。
 - 而且图片在`_posts/imgsrc`下时，无法通过url获得，只能放在`.. /imgsrc`下
 
 ## 折叠块代码高亮
@@ -161,3 +161,7 @@ import os
 
 
 欢迎参观我的博客：[https://xdo0.github.io](https://xdo0.github.io)
+
+# 使用
+
+- 参考[article-header.html](https://github.com/XDo0/XDo0.github.io/blob/master/_includes/article-header.html)和[article-footer.html](https://github.com/XDo0/XDo0.github.io/blob/master/_includes/article-footer.html)，把**modify_date**放到header上
