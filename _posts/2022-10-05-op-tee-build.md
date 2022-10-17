@@ -59,11 +59,10 @@ curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verif
 
 	> ccache: error: execv of /home/optee/build/../toolchains/aarch32/bin/arm-linux-gnueabihf-gcc failed: No such file or directory
 
-<div class="snippet" markdown="1">
 ```bash
 make -f toolchain.mk toolchains -j2
 ```
-</div>
+{: .copyable} 
 
 ​	`make toolchains`命令没有下载aarch32的编译链接工具
 

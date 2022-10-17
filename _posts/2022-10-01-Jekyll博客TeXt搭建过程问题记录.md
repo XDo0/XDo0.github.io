@@ -119,7 +119,7 @@ def hello():
 
 ![image-20221017173650880](https://xdo0.github.io/imgsrc/image-20221017173650880.png){:.border}
 
-其中raw字段是防止格式出错的，使用时不加上。
+其中[本博客md文件](https://github.com/XDo0/XDo0.github.io/blob/master/_posts/2022-10-01-Jekyll%E5%8D%9A%E5%AE%A2TeXt%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95.md#%E4%BB%A3%E7%A0%81%E6%98%BE%E7%A4%BA%E8%A1%8C%E6%95%B0%E5%92%8C%E8%AF%AD%E8%A8%80)里的raw字段是防止格式出错的，使用时不加上。
 
 ```plaintext
 {%- raw -%}
