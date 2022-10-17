@@ -40,14 +40,14 @@ sudo aptitude install myNewPackage
 
 如果是手动安装需要把最后一个命令的`~/bin/repo`更改为`/usr/local/bin/repo`，如下，才能直接在bash里使用repo命令
 
-<div class="snippet" markdown="1">
+
 ```bash
 export REPO=$(mktemp /tmp/repo.XXXXXXXXX)
 curl -o ${REPO} https://storage.googleapis.com/git-repo-downloads/repo
 gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
 curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ${REPO} && install -m 755 ${REPO} /usr/local/bin/repo
 ```
-</div>
+{: .copyable} 
 
 # 获取源码
 

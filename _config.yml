@@ -162,7 +162,7 @@ analytics:
 
 ## => Clipboard
 ##############################
-clipboard: false
+clipboard: true
 
 ## => Build
 ##############################
