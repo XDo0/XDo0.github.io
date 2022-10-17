@@ -97,6 +97,12 @@ pre {
 
 ## 代码复制按钮
 
+### 开启功能
+
+可以直接fork我的博客repo，也可以参考[这个PR](https://github.com/kitian616/jekyll-TeXt-theme/pull/218/files)来手动修改
+
+### 使用
+
 在代码块下一行加入`{: .copyable} `，如下
 
 ````plaintext
@@ -111,7 +117,7 @@ def hello():
 
 如下
 
-![image-20221017173650880](https://xdo0.github.io/imgsrc/image-20221017173650880.png"特殊图片显示"){:.border}
+![image-20221017173650880](https://xdo0.github.io/imgsrc/image-20221017173650880.png){:.border}
 
 ```plaintext
 {% highlight javascript linenos %}

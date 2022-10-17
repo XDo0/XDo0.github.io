@@ -61,6 +61,7 @@ curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verif
 ```bash
 make -f toolchain.mk toolchains -j2
 ```
+{: .copyable} 
 
 ​	`make toolchains`命令没有下载aarch32的编译链接工具
 
