@@ -107,15 +107,18 @@ def hello():
 {: .copyable} 
 ````
 
-## 代码显示行数
+## 代码显示行数和语言
 
 如下
+
+![image-20221017173650880](https://xdo0.github.io/imgsrc/image-20221017173650880.png"特殊图片显示"){:.border}
 
 ```plaintext
 {% highlight javascript linenos %}
 var hello = 'hello';
 var world = 'world';
 var space = ' ';
+(() => console.log(hello + space + world + space + hello + space + world + space + hello + space + world + space + hello + space + world))();
 {% endhighlight %}
 ```
 
