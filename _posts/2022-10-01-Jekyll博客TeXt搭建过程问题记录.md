@@ -119,10 +119,10 @@ def hello():
 
 ![image-20221017173650880](https://xdo0.github.io/imgsrc/image-20221017173650880.png){:.border}
 
-```plaintext
+```markdown
 {% highlight javascript linenos %}
 var hello = 'hello';
-var world = 'world';
+var world = 'world';markdown
 var space = ' ';
 (() => console.log(hello + space + world + space + hello + space + world + space + hello + space + world + space + hello + space + world))();
 {% endhighlight %}
