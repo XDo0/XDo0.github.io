@@ -2,7 +2,7 @@
 title: Jekyll博客TeXt搭建过程问题记录
 tag: [frontend, github pages]
 key: 2022-10-01-Jekyll博客TeXt搭建过程问题记录
-modify_date: 2022-10-16
+modify_date: 2022-10-17
 ---
 
 # 背景
@@ -16,77 +16,9 @@ modify_date: 2022-10-16
 按照中文的文档搭建即可，我是选择fork后更名为github.io，再git clone下来，这样不用安装Jekyll。
 看完这个文档再来看下面的。
 
-# 遇到的问题
-## git使用
-可以参考我的博客[git简要使用](https://xdo0.github.io/2020/06/07/git%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8.html)
+# 代码
 
-## gittalk
-配置好会出现`未找到相关issue进行评论`的问题
-* 首先，确保已经为你的username.github.io打开了issue
-* 然后在你的blog的gittalk上登陆你的github账号
-* 这样以后你在发布好博客预览时就会初始化gittalk  
-
-这可能不是最好的解决方法，如果哪位有较好的解决方法请评论里说一下\^_^
-也有大佬写了自动初始化gittalk的脚本，百度搜索就有
-
-### gitalk报错403
-
-> Error: Request failed with status code *403* 
-
-解决：把`_data/variables.yml`的gitalk换成最新版本就可以
-
-```yaml
-gitalk:
-      js: 'https://unpkg.com/gitalk/dist/gitalk.min.js'
-      css: 'https://unpkg.com/gitalk/dist/gitalk.css'
-```
-
-### 报错：network error
-
-需要将这个url： `https://cors-anywhere.azm.workers.dev/`加入科学上网，否则就得[更换proxy](https://github.com/gitalk/gitalk/issues/506)
-
-Ref:
-
-- [TeXt博客更换gitalk的proxy步骤](https://github.com/kitian616/jekyll-TeXt-theme/issues/348)
-- [搭建跨域反向代理](https://liuyueyang.top/022111.html#其它的问题)
-
-## leancloud统计点击量为0
-按文档配置好后发现每个文章的阅读量一直是0，后来把`_config.yml`的`pageview provider:`的`leancloud`加上双引号就成功了。
-## 搜索引擎收录博客
-写完博客后使用baidu和google都搜索不到，需要自己提交。
-提交网址为：
-* [Google](https://search.google.com/search-console?hl=zh-CN)
-1.选择网址前缀
-2.选择html验证，把html文件下载后放到github.io的repo根目录就行
-3.验证成功后选择站点地图（TeXt已经把sitemap插件安装好了），添加`https://username.github.io/sitemap.xml`即可。
-sitemap文件就是能够让搜索引擎
-* [Baidu](https://ziyuan.baidu.com/dashboard/index)
-和google类似，不过据说github禁止百度的爬虫，所以没法用百度搜索到github相关界面。
-
-## 写个自己的about
-直接更改根目录的about.md
-
-## yaml
-yaml写在自己每篇博客的markdown文件开头，举个例子
-```yaml
----
-title:Example
-tag: example
-key :2020-06-14example
----
-```
-其中key是任意的只需要每篇文章不同即可，用来区分gittalk的issue和leancloud统计的
-真正的时间是看md文件名的
-
-## vscode替换图片
-这个博客有个比较大的问题是：图片在构建博客后无法按照相对路径寻址，只能上传图床
-### 解决
-使用vscode的全局文本替换功能
-将`.. /imgsrc`替换为`https://xdo0.github.io/imgsrc`
-
-### p.s.
-- 之前尝试用GitHub action替换，试了几个github action market的，效果不好；也尝试[自己写](https://juejin.cn/post/6875857705282568200#heading-7)，需要配置git相关密钥，太麻烦了。
-- 而且图片在`_posts/imgsrc`下时，无法通过url获得，只能放在`.. /imgsrc`下
+关于代码块的使用参考：[jekyll-TeXt-theme/2016-06-16-code-blocks.md at master · kitian616/jekyll-TeXt-theme (github.com)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/docs/_posts/2016-06-16-code-blocks.md)
 
 ## 折叠块代码高亮
 
@@ -162,6 +94,103 @@ pre {
 ```
 
 这样后面的代码块超出长度就会有纵轴的滑动条，其中`max-height`可以自己设置。
+
+## 代码复制按钮
+
+在代码块下一行加入`{: .copyable} `，如下
+
+````plaintext
+```python
+def hello():
+    print("Hello world!")
+```
+{: .copyable} 
+````
+
+## 代码显示行数
+
+如下
+
+```plaintext
+{% highlight javascript linenos %}
+var hello = 'hello';
+var world = 'world';
+var space = ' ';
+{% endhighlight %}
+```
+
+# 遇到的问题
+## git使用
+可以参考我的博客[git简要使用](https://xdo0.github.io/2020/06/07/git%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8.html)
+
+## gittalk
+配置好会出现`未找到相关issue进行评论`的问题
+* 首先，确保已经为你的username.github.io打开了issue
+* 然后在你的blog的gittalk上登陆你的github账号
+* 这样以后你在发布好博客预览时就会初始化gittalk  
+
+这可能不是最好的解决方法，如果哪位有较好的解决方法请评论里说一下\^_^
+也有大佬写了自动初始化gittalk的脚本，百度搜索就有
+
+### gitalk报错403
+
+> Error: Request failed with status code *403* 
+
+解决：把`_data/variables.yml`的gitalk换成最新版本就可以
+
+```yaml
+gitalk:
+      js: 'https://unpkg.com/gitalk/dist/gitalk.min.js'
+      css: 'https://unpkg.com/gitalk/dist/gitalk.css'
+```
+
+### 报错：network error
+
+需要将这个url： `https://cors-anywhere.azm.workers.dev/`加入科学上网，否则就得[更换proxy](https://github.com/gitalk/gitalk/issues/506)
+
+Ref:
+
+- [TeXt博客更换gitalk的proxy步骤](https://github.com/kitian616/jekyll-TeXt-theme/issues/348)
+- [搭建跨域反向代理](https://liuyueyang.top/022111.html#其它的问题)
+
+## leancloud统计点击量为0
+按文档配置好后发现每个文章的阅读量一直是0，后来把`_config.yml`的`pageview provider:`的`leancloud`加上双引号就成功了。
+## 搜索引擎收录博客
+写完博客后使用baidu和google都搜索不到，需要自己提交。
+提交网址为：
+* [Google](https://search.google.com/search-console?hl=zh-CN)
+1.选择网址前缀
+2.选择html验证，把html文件下载后放到github.io的repo根目录就行
+3.验证成功后选择站点地图（TeXt已经把sitemap插件安装好了），添加`https://username.github.io/sitemap.xml`即可。
+sitemap文件就是能够让搜索引擎
+* [Baidu](https://ziyuan.baidu.com/dashboard/index)
+和google类似，不过据说github禁止百度的爬虫，所以没法用百度搜索到github相关界面。
+
+## 写个自己的about
+直接更改根目录的about.md
+
+## yaml
+yaml写在自己每篇博客的markdown文件开头，举个例子
+```yaml
+---
+title:Example
+tag: example
+key :2020-06-14example
+---
+```
+其中key是任意的只需要每篇文章不同即可，用来区分gittalk的issue和leancloud统计的
+真正的时间是看md文件名的
+
+## vscode替换图片
+这个博客有个比较大的问题是：图片在构建博客后无法按照相对路径寻址，只能上传图床
+### 解决
+使用vscode的全局文本替换功能
+将`.. /imgsrc`替换为`https://xdo0.github.io/imgsrc`
+
+### p.s.
+- 之前尝试用GitHub action替换，试了几个github action market的，效果不好；也尝试[自己写](https://juejin.cn/post/6875857705282568200#heading-7)，需要配置git相关密钥，太麻烦了。
+- 而且图片在`_posts/imgsrc`下时，无法通过url获得，只能放在`.. /imgsrc`下
+
 
 ## 飞书文档转换为markdown
 可以参考[这里](https://sspai.com/post/73386)，其中飞书应用申请要看最新的[README](https://github.com/Wsine/feishu2md)
