@@ -119,13 +119,17 @@ def hello():
 
 ![image-20221017173650880](https://xdo0.github.io/imgsrc/image-20221017173650880.png){:.border}
 
-```markdown
+其中raw字段是防止格式出错的，使用时不加上。
+
+```plaintext
+{%- raw -%}
 {% highlight javascript linenos %}
 var hello = 'hello';
 var world = 'world';markdown
 var space = ' ';
 (() => console.log(hello + space + world + space + hello + space + world + space + hello + space + world + space + hello + space + world))();
 {% endhighlight %}
+{% endraw %}
 ```
 
 # 遇到的问题
