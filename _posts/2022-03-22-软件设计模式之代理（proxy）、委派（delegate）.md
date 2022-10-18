@@ -1,6 +1,6 @@
 ---
 title: 软件设计模式之代理（proxy）、委派（delegate）
-tag: [软件设计, Java]
+tag: [软件设计, java]
 key: 2022-03-22-软件设计模式之代理（proxy）、委派（delegate）
 ---
 

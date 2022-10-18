@@ -1,6 +1,6 @@
 ---
 title: Android 命令行工具及 adb 常用命令
-tag: [Android, adb]
+tag: [android, adb]
 key: 2021-05-01-Android 命令行工具及 adb 常用命令
 ---
 
