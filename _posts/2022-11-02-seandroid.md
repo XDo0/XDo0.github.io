@@ -107,7 +107,6 @@ setenforce 1
 ### 查看安全上下文
 
 安全上下文的格式为：`user:role:type:sensitivity[:categories]`。Android中通常可以忽略上下文的 `user`、`role` 和 `sensitivity` 字段。
-
 {:.info}
 
 > Android 并不会使用 SELinux 提供的所有功能。
@@ -143,15 +142,9 @@ SELinux中尝试进行的所有违规行为都会被内核记录到 `dmesg` 和 
 
 > 当应用或进程（称为主体）发出访问对象（如文件）的请求时，SELinux 会检查AVC（Access Vector Cache，访问向量缓存），其中缓存有主体和对象的访问权限。
 
-# Refer
-
-1. [Android 中的安全增强型 Linux - Android开源项目](https://source.android.com/docs/security/features/selinux)
-
-2. [Android : SELinux 简析&修改 ](https://www.cnblogs.com/blogs-of-lxl/p/7515023.html)
-
-3. [SELinux管理 (biancheng.net)](http://c.biancheng.net/linux_tutorial/18/)
-
-4. [Selinux安全上下文详解_51CTO博客_selinux](https://blog.51cto.com/u_11970509/2320779)
-
-   [^5]: [SELinux CIL - Runsisi's Blog](https://runsisi.com/2020/01/02/selinux-cil/)
+[^1]: [Android 中的安全增强型 Linux - Android开源项目](https://source.android.com/docs/security/features/selinux)
+[^2]: [Android : SELinux 简析&修改 ](https://www.cnblogs.com/blogs-of-lxl/p/7515023.html)
+[^3]: [SELinux管理 (biancheng.net)](http://c.biancheng.net/linux_tutorial/18/)
+[^4]: [Selinux安全上下文详解_51CTO博客_selinux](https://blog.51cto.com/u_11970509/2320779)
+[^5]:[SELinux CIL - Runsisi's Blog](https://runsisi.com/2020/01/02/selinux-cil/)
 
