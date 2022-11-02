@@ -2,7 +2,7 @@
 title: Android安全特性-SEAnroid
 tag: [selinux, android, security]
 key: 2022-11-02-seandroid
-permalink: android-sec/seandroid.html
+permalink: /android-sec/seandroid.html
 sidebar:
   nav: android-sec
 ---

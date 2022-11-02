@@ -53,4 +53,4 @@ android-sec:
   - title:      Android安全特性
     children:
       - title:  SELinux
-        url:    /_posts/2022-11-02-seandroid
+        url:    /android-sec/seandroid.html
