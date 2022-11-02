@@ -35,7 +35,7 @@ DAC系统通常比较粗放，并且容易出现无意中提权的问题：比�
 
 在SELinux中`核心机构`的规则便由安全策略配置文件确定。
 
-# 2. SELinux相关基础
+# 2. SELinux相关基础[^3]
 ## 2.1 SELinux介绍
 
 关于SELinux的直观介绍可以看看[这篇动漫](https://opensource.com/business/13/11/selinux-policy-guide)，也可以直接看[中文翻译](https://www.jianshu.com/p/1d045e60cdfa)。
@@ -77,13 +77,13 @@ SElinux是一个标签系统。系统中的**每个进程、每个文件/目录�
 allow untrusted_app app_data_file:file { read write };
 ```
 
-### 2.4 安全上下文
+### 2.4 安全上下文[^4]
 
 安全上下文（Security Context），也称作标签（Security Label）是 SELinux 用于对启用SELinux的系统上的资源（如进程和文件）进行分类的机制。
 
 ![img](https://xdo0.github.io/imgsrc/300px-SELinux-context.png)
 
-# 3. Android上的SELinux
+# 3. Android上的SELinux[^1]
 
 关于Linux上的SELinux可以参考这篇：[SELinux管理 (biancheng.net)](http://c.biancheng.net/linux_tutorial/18/)，而Android上还是参考官方文档——[自定义 SELinux  -AOSP](https://source.android.com/docs/security/features/selinux/customize)。
 
@@ -104,7 +104,7 @@ setenforce 0
 setenforce 1
 ```
 
-### 查看安全上下文
+### 查看安全上下文[^2]
 
 安全上下文的格式为：`user:role:type:sensitivity[:categories]`。Android中通常可以忽略上下文的 `user`、`role` 和 `sensitivity` 字段。
 {:.info}
