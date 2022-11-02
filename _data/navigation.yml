@@ -48,3 +48,9 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /about.html
+
+android-sec:
+  - title:      Android安全特性
+    children:
+      - title:  SELinux
+        url:    /_posts/2022-11-02-seandroid
