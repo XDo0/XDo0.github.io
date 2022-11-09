@@ -38,11 +38,10 @@ Ref: [VSCode – How To Debug A WSL C++/CMake Project (matgomes.com)](https://ma
 
 - 具体的环境变量在[这里](https://code.visualstudio.com/docs/editor/variables-reference)查看
 
-- json中type的列表使用IntelliSense的提示`CTRL+SPACE`来查看
+- json中type的列表使用IntelliSense的提示`CTRL+SPACE`或`CTRL+I`来查看
 
-> 许多IDE都是这个快捷键提示，但是由于和中文输入法快捷键冲突[^1]
+> 许多IDE都是`CTRL+SPACE`提示，但是由于和中文输入法快捷键冲突[^1]，可以直接使用`CTRL+I`或修改vscode快捷键为`CTRL+L`
 >
-> 解决：win11下系统搜索`替代默认输入法`，修改输入语言热键，把`CTRL+SPACE`的改成其他的快捷键，重启vscode即可
 
 下面是minimalist的launch.json配置[^2]
 
@@ -71,7 +70,7 @@ Ref: [VSCode – How To Debug A WSL C++/CMake Project (matgomes.com)](https://ma
 ```
 {: .copyable} 
 
-[^1]:[VSCode主动触发智能提示(Ctrl+Space系统快捷键修改)_姚文洲的博客-CSDN博客_vscode按钮触发事件](https://blog.csdn.net/qq_42123832/article/details/110681357)
+[^1]:[修改Visual Studio Code的自定义键盘快捷键_汪子熙的博客-CSDN博客_visual studio怎么更改快捷键](https://jerry.blog.csdn.net/article/details/100576073)
 [^2]:[VSCode – How To Debug A WSL C++/CMake Project](https://matgomes.com/debugging-wsl-c-cmake-vscode/#:~:text=To%20simplify%20things%20a%20little%20bit%2C%20the%20following%20Json%20block%20shows%20a%20minimalist%20launch.jsonthat%20should%20be%20enough%20to%20debug%20an%20executable.)
 
 # 不使用CMake的工程调试配置
