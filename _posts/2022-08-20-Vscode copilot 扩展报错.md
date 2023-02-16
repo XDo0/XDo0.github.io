@@ -2,7 +2,7 @@
 title: Vscode copilot 扩展报错
 tag: [vscode]
 key: 2022-08-20-Vscode copilot 扩展报错
-modifiy_date: 2023-02-15
+modify_date: 2023-02-15
 ---
 
 
