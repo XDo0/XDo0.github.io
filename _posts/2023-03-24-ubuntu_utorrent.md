@@ -60,7 +60,7 @@ qbittorrent下载需要开放个端口，在`选项`-`连接`-`监听端口`中�
 
 记得防火墙需要放行这个端口。
 
-```bash
+{% highlight bash linenos %}
 wget http://download-hr.utorrent.com/track/beta/endpoint/utserver/os/linux-x64-ubuntu-13-04 -O utserver.tar.gz
 sudo tar xvf utserver.tar.gz -C /opt/
 sudo apt install libssl-dev
@@ -69,7 +69,7 @@ sudo apt-get install ./libssl1.0.0_1.0.2n-1ubuntu5_amd64.deb
 sudo ln -s /opt/utorrent-server-alpha-v3_3/utserver /usr/bin/utserver
 echo "ut_webui_port: 8085" >  /opt/utorrent-server-alpha-v3_3/utserver.conf
 utserver -settingspath /opt/utorrent-server-alpha-v3_3/ -configfile /opt/utorrent-server-alpha-v3_3/utserver.conf -daemon
-```
+{% endhighlight %}
 
 [^1]: [How to Install uTorrent in Ubuntu 20.04](https://www.linuxbabe.com/ubuntu/install-utorrent-ubuntu-20-04)
 [^2]: [utserver: error while loading shared libraries: libssl.so.1.0.0: cannot open shared object file: No such file or directory](https://askubuntu.com/a/1368551)
