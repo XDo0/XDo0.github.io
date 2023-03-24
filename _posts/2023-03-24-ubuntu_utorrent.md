@@ -75,6 +75,6 @@ utserver -settingspath /opt/utorrent-server-alpha-v3_3/ -configfile /opt/utorren
 [^2]: [utserver: error while loading shared libraries: libssl.so.1.0.0: cannot open shared object file: No such file or directory](https://askubuntu.com/a/1368551)
 [^3]: [How to change port number utorrent in ubuntu?](https://askubuntu.com/questions/202429/how-to-change-port-number-utorrent-in-ubuntu#:~:text=How%20to%20Change%20uTorrent%20Port%20A%20super%20easy,to%20Settings%20and%20select%20webUI%20option.%20See%20More.)
 [^4]: [Linux 服务器安装 qBittorrent - Mr. Ma's Blog (misterma.com)](https://www.misterma.com/archives/902/)
-[^5]: [Install qBittorrent-nox on Ubuntu 20.04 | Lindevs](https://lindevs.com/install-qbittorrent-nox-on-ubuntu)
+[^5]: [Install qBittorrent-nox on Ubuntu 20.04  Lindevs](https://lindevs.com/install-qbittorrent-nox-on-ubuntu)
 
 然后可以在浏览器输入`你的ip:8085/gui`打开μtorrent的web版，第一次登录的账户名是`admin`，密码是空密码，在设置中`Web UI`中更改。
