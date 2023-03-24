@@ -47,10 +47,11 @@ sudo systemctl enable qbittorrent-nox
 下载的文件保存在`//Downloads/` ，可以在设置中修改
 
 qbittorrent下载需要开放个端口，在`选项`-`连接`-`监听端口`中可以看到，记得防火墙开放这个端口[^4]。
+{:.warning}
 上传依然需要开放端口，默认是9000，在`设置`-`高级`-`qbittorrent相关`-`内置tracker端口`中看到
 {:.warning}
 
-# μtorrent
+# 安装μtorrent
 
 μtorrent最新版仅支持Ubuntu13.04，但是ubuntu20.04依然可以用[^1]。
 
