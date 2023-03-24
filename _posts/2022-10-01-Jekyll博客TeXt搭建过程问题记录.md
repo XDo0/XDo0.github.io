@@ -221,5 +221,5 @@ key :2020-06-14example
 
 - 参考[article-header.html](https://github.com/XDo0/XDo0.github.io/blob/master/_includes/article-header.html)和[article-footer.html](https://github.com/XDo0/XDo0.github.io/blob/master/_includes/article-footer.html)，把**modify_date**放到header上
 - 一些特殊用法
-  - `{%- raw -%}`形式参考[liquid语法](https://liquid.bootcss.com/)
-  - `{:.info}`形式参考[kramdown-ALD](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions)
+  - `/{%- raw -%}`形式参考[liquid语法](https://liquid.bootcss.com/)
+  - `/{:.info}`形式参考[kramdown-ALD](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions)
