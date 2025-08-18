@@ -27,9 +27,8 @@ key: page-about
 ---
 <font face="黑体" size="6"> about me</font>
 
-* NKU to IIE.UCAS
 * Email： donnie2020 AT 163.com
 * [CSDN](https://blog.csdn.net/Iv3R_c)
 * [CNBlog](https://www.cnblogs.com/xdo0/)
-* research interest: Mobile & AI Security
-* hobby： basketball, pes mobile, movies
+* research interest: Fin-tech, Mobile & AI Security
+* hobbies： basketball, movies
